@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "silvercare-health-history-mcp"
+version = "0.1.0"
+description = "SilverCare historical health records MCP server"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["mcp[cli]>=1.27.0"]
+
+[project.scripts]
+silvercare-history-mcp = "silvercare_history_mcp.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
